@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-image: img("lightning.jpeg")
+    background-image: url("lightning.jpeg")
 }
 
 header {
