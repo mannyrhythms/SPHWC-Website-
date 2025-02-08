@@ -1,81 +1,159 @@
 /* styles.css */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-image: url(img/lightning.jpg)
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    position: relative;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  position: relative;
 }
 
 nav {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: flex-end; /* Keep the dropdown on the right */
+  background-color: #333;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end; /* Keep the dropdown on the right */
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block; /* Make the dropdown container a block element */
-    margin-right: 20px; /* Add some spacing on the right */
+  position: relative;
+  display: inline-block; /* Make the dropdown container a block element */
+  margin-right: 20px; /* Add some spacing on the right */
 }
 
 .dropbtn {
-    background-color: #333; /* Same as nav background */
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  background-color: #333; /* Same as nav background */
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
 .dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1; /* Ensure it's above other content */
-    right: 0; /* Position on the right */
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensure it's above other content */
+  right: 0; /* Position on the right */
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 /* ... (rest of your CSS for sections, footer, etc.) ... */
 
-#home, #s-power-men, #s-power-women, #health-coaching, #about, #contact {
-    padding: 40px;
-    min-height: 300px;
+#home,
+#s-power-men,
+#s-power-women,
+#health-coaching,
+#about,
+#contact {
+  padding: 40px;
+  min-height: 300px;
 }
 
 /* Example background colors */
-#home { background-color: #f8f8f8; }
-#s-power-men { background-color: #e0f2f7; }
-#s-power-women { background-color: #ffebee; }
-#health-coaching { background-color: #dcedc1; }
-#about { background-color: #f5f5f5; }
-#contact { background-color: #fafafa; }
+#home {
+  background-color: hsl(0, 0%, 97%, 0.5);
+}
+#s-power-men {
+  background-color: hsl(193, 59%, 92.4%, 0.5);
+}
+
+#s-power-women {
+  background-color: hsl(351, 100%, 96.1%, 0.5);
+}
+#health-coaching {
+  background-color: hsl(99, 56%, 95%, 0.5);
+}
+#about {
+  background-color: hsl(0°, 0%, 96%, 0.5);
+}
+#contact {
+  background-color: hsl(0, 0%, 98%, 0.5);
+}
+
+.main-page {
+  font-size: 1.1em;
+  background-image: url("img/lightning.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 95%;
+  background-position: absolute right -325% top -50%;
+}
+
+/* Add this CSS */
+.container,
+.container3 {
+  display: flex; /* Align image and text side by side */
+  align-items: flex-start; /* Align text to the top of the image */
+  gap: 10rem; /* Space between image and text */
+}
+
+.container img,
+.container3 img {
+  flex-shrink: 0; /* Prevents image from shrinking */
+  width: 350px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-content. text-content3 {
+  display: flex;
+  flex-direction: column; /* Stack paragraphs and list vertically */
+  gap: 1rem; /* Adds spacing between text elements */
+}
+
+.container p,
+container3 p {
+  margin: 50; /* Remove extra margins from paragraphs */
+}
+
+#s-power-women,
+#about {
+  display: flex;
+  align-items: center; /* Align text and image vertically */
+  justify-content: space-between; /* Ensures spacing between text and image */
+}
+
+.container2,
+.container4 {
+  flex: 1; /* Allows text to take up remaining space */
+}
+
+.moon-img,
+.zee-img {
+  margin-left: 240px; /* Space between text and image */
+  width: 300px; /* Adjust as needed */
+  height: auto;
+}
+
+.highlight {
+  font-size: 1.5em; /* Increase text size */
+  font-weight: bold; /* Optional: Make it bold */
+  color: #ff6600; /* Optional: Change color */
+}
