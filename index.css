@@ -150,6 +150,7 @@ container3 p {
   margin-left: 240px; /* Space between text and image */
   width: 300px; /* Adjust as needed */
   height: auto;
+  border-radius: 50%;
 }
 
 .highlight {
