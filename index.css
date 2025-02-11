@@ -107,51 +107,47 @@ nav {
   background-position: absolute right -325% top -50%;
 }
 
-/* Add this CSS */
-.container,
-.container3 {
-  display: flex; /* Align image and text side by side */
-  align-items: flex-start; /* Align text to the top of the image */
-  gap: 10rem; /* Space between image and text */
-}
-
-.container img,
-.container3 img {
-  flex-shrink: 0; /* Prevents image from shrinking */
-  width: 350px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.text-content. text-content3 {
+/* Base container for consistency */
+.container, .container2, .container3, .container4 {
   display: flex;
-  flex-direction: column; /* Stack paragraphs and list vertically */
-  gap: 1rem; /* Adds spacing between text elements */
+  align-items: center; /* Align images and text */
+  gap: 20px; /* Space between text and image */
+  max-width: 900px; /* Adjust width as needed */
+  margin: auto; /* Center content */
+  padding: 20px;
 }
 
-.container p,
-container3 p {
-  margin: 50; /* Remove extra margins from paragraphs */
+/* Containers where the image is on the LEFT */
+.container, .container3 {
+  flex-direction: row; /* Default: Image first, then text */
 }
 
-#s-power-women,
-#about {
-  display: flex;
-  align-items: center; /* Align text and image vertically */
-  justify-content: space-between; /* Ensures spacing between text and image */
+/* Containers where the image is on the RIGHT */
+.container2, .container4 {
+  flex-direction: row-reverse; /* Reverse: Text first, then image */
 }
 
-.container2,
-.container4 {
-  flex: 1; /* Allows text to take up remaining space */
-}
-
-.moon-img,
-.zee-img {
-  margin-left: 240px; /* Space between text and image */
-  width: 300px; /* Adjust as needed */
+/* Image styling */
+.container img, .container2 img, 
+.container3 img, .container4 img {
+  max-width: 40%; /* Adjust as needed */
   height: auto;
-  border-radius: 50%;
+  border-radius: 10px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container, .container2, .container3, .container4 {
+    flex-direction: column; /* Stack on small screens */
+    text-align: center;
+  }
+
+  .container img, .container2 img, 
+  .container3 img, .container4 img {
+    max-width: 80%; /* Adjust for small screens */
+  }
+}
+
 
 .highlight {
   font-size: 1.5em; /* Increase text size */
