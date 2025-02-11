@@ -107,48 +107,6 @@ nav {
   background-position: absolute right -325% top -50%;
 }
 
-/* Base container for consistency */
-.container, .container2, .container3, .container4 {
-  display: flex;
-  align-items: center; /* Align images and text */
-  gap: 20px; /* Space between text and image */
-  max-width: 900px; /* Adjust width as needed */
-  margin: auto; /* Center content */
-  padding: 20px;
-}
-
-/* Containers where the image is on the LEFT */
-.container, .container3 {
-  flex-direction: row; /* Default: Image first, then text */
-}
-
-/* Containers where the image is on the RIGHT */
-.container2, .container4 {
-  flex-direction: row-reverse; /* Reverse: Text first, then image */
-}
-
-/* Image styling */
-.container img, .container2 img, 
-.container3 img, .container4 img {
-  max-width: 40%; /* Adjust as needed */
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container, .container2, .container3, .container4 {
-    flex-direction: column; /* Stack on small screens */
-    text-align: center;
-  }
-
-  .container img, .container2 img, 
-  .container3 img, .container4 img {
-    max-width: 80%; /* Adjust for small screens */
-  }
-}
-
-
 .highlight {
   font-size: 1.5em; /* Increase text size */
   font-weight: bold; /* Optional: Make it bold */
