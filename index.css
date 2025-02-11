@@ -107,6 +107,10 @@ nav {
   background-position: absolute right -325% top -50%;
 }
 
+img {
+  filter: brightness (0) invert (1);
+}
+
 .highlight {
   font-size: 1.5em; /* Increase text size */
   font-weight: bold; /* Optional: Make it bold */
