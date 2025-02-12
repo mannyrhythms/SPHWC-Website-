@@ -84,6 +84,8 @@ nav {
 #s-power-men {
 background-color: hsl(193, 59%, 92.4%, 0.5);
   background-image: url("images/sun.png");
+  background-repeat: no-repeat;
+  background-size: 200px 100px;
 }
 
 #s-power-women {
