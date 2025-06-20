@@ -1,121 +1,505 @@
-/* styles.css */
-body {
-  font-family: sans-serif;
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
 }
 
-header {
-  background-color: #f0f0f0;
-  padding: 20px;
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #4a7c73 0%, #5d8a7e 100%);
+  color: white;
+  padding: 80px 20px;
   text-align: center;
-  position: relative;
-}
-
-nav {
-  background-color: #333;
-  color: white;
-  margin-top: 10px;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  min-height: 400px;
   display: flex;
-  justify-content: flex-end; /* Keep the dropdown on the right */
+  align-items: center;
+  justify-content: center;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block; /* Make the dropdown container a block element */
-  margin-right: 20px; /* Add some spacing on the right */
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.dropbtn {
-  background-color: #333; /* Same as nav background */
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+.lightning-icon {
+  margin-bottom: 30px;
 }
 
-.dropdown-content {
-  display: none; /* Hidden by default */
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1; /* Ensure it's above other content */
-  right: 0; /* Position on the right */
+.lightning-icon svg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.hero-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Main Content */
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-/* ... (rest of your CSS for sections, footer, etc.) ... */
-
-#home,
-#s-power-men,
-#s-power-women,
-#health-coaching,
-#about,
-#contact {
+/* Content Sections */
+.content-section {
+  background: white;
+  border-radius: 12px;
   padding: 40px;
-  min-height: 300px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Example background colors */
-#home {
-  background-color: hsl(0, 0%, 97%, 0.5);
-}
-#s-power-men {
-background-color: hsl(193, 59%, 92.4%, 0.5);
-  background-image: url("images/sun.png");
-  background-repeat: no-repeat;
-  background-size: 200px 100px;
+.content-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-#s-power-women {
-  background-color: hsl(351, 100%, 96.1%, 0.5);
-}
-#health-coaching {
-  background-color: hsl(99, 56%, 95%, 0.5);
-}
-#about {
-  background-color: hsl(0°, 0%, 96%, 0.5);
-}
-#contact {
-  background-color: hsl(0, 0%, 98%, 0.5);
+.content-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
 }
 
-.main-page {
-  font-size: 1.1em;
-  background-image: url("images/lightning.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 95%;
-  background-position: absolute right -325% top -50%;
+.content-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
 }
 
-img {
-  filter: brightness (0) invert (1);
+/* Programs Section */
+.programs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.highlight {
-  font-size: 1.5em; /* Increase text size */
-  font-weight: bold; /* Optional: Make it bold */
-  color: #ff6600; /* Optional: Change color */
+.program-group {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.program-group:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.program-group h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #4a7c73;
+}
+
+.program-group p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Testimonials */
+#testimonials {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+}
+
+.testimonial {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+}
+
+.testimonial:last-child {
+  margin-bottom: 0;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4a7c73;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 12px;
+}
+
+.testimonial-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #2c3e50;
+}
+
+.testimonial-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.star-rating {
+  color: #ffc107;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.testimonial-actions {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.like-count, .comment-count {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Contact Form */
+.contact-section {
+  background: white;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a7c73;
+  box-shadow: 0 0 0 3px rgba(74, 124, 115, 0.1);
+  background: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #adb5bd;
+}
+
+.submit-btn {
+  background: #4a7c73;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background: #3d6359;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 124, 115, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px;
+    min-height: 350px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .lightning-icon svg {
+    width: 60px;
+    height: 90px;
+  }
+
+  .main-content {
+    padding: 30px 15px;
+  }
+
+  .content-section {
+    padding: 30px 25px;
+    margin-bottom: 25px;
+  }
+
+  .content-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 50px 15px;
+    min-height: 300px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .lightning-icon {
+    margin-bottom: 20px;
+  }
+
+  .lightning-icon svg {
+    width: 50px;
+    height: 75px;
+  }
+
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .content-section {
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .content-section p {
+    font-size: 1rem;
+  }
+
+  .testimonial {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-header {
+    margin-bottom: 10px;
+  }
+
+  .testimonial-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 25px 15px;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+  .hero-section {
+    padding: 100px 20px;
+    min-height: 500px;
+  }
+
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.3rem;
+  }
+
+  .lightning-icon svg {
+    width: 100px;
+    height: 150px;
+  }
+
+  .main-content {
+    max-width: 900px;
+    padding: 50px 20px;
+  }
+
+  .content-section {
+    padding: 50px;
+    margin-bottom: 40px;
+  }
+
+  .content-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .content-section p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .content-section {
+    animation: none;
+    transition: none;
+  }
+  
+  .content-section:hover {
+    transform: none;
+  }
+  
+  .submit-btn:hover {
+    transform: none;
+  }
+}
+
+/* Focus styles for better accessibility */
+.submit-btn:focus {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .content-section {
+    border: 2px solid #333;
+  }
+  
+  .testimonial {
+    border: 2px solid #333;
+  }
 }
